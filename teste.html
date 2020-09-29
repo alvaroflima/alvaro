@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Azulejo</title>
+	</head>
+	<body>
+
+		<p> Digite as informações a baixo  </p>
+		
+		<p>QUANTIDADE DE AZULEJOS</p>
+		<hr>
+
+		<input type="Number" name="largura" id="lid" placeholder="Largura da parede"/>
+		<br>
+		<input type="Number" name="altura" id="aid" placeholder="Altura da parede"/>
+		<br>
+		<TD><INPUT TYPE=RADIO NAME="mod" id="A1" VALUE="30*30" onclick="aj1()"> 30x30
+			<br>
+        	<INPUT TYPE=RADIO NAME="mod" id="A2" VALUE="30*40" onclick="aj2()"> 30x40
+        	<br>
+        	<INPUT TYPE=RADIO NAME="mod" id="A3" VALUE="40*40" onclick="aj3()"> 40x40
+			<br></TD>
+		<input type="button" value="calcular" id="btn-exibir"/>
+		<hr>
+		<p id="Azulejo"></p>
+		<hr>
+
+		<script type="text/javascript">
+			//deixa variavel "Azul" global, pois atende todas as funçoes
+			var Azul=document.getElementById("Azulejo");
+
+			function aj1 () {
+			var lar = Number(document.getElementById('lid').value)/30;
+			var alt = Number(document.getElementById('aid').value)/30;
+			var calcular = lar * alt
+
+			document.getElementById("btn-exibir").addEventListener("click", myFunction);
+
+				function myFunction() {
+ 				 Azul.innerHTML = 'vai precisar de : ' + calcular.toFixed(2) +' Azulejos' ;
+				}
+
+ 			}
+			function aj2 () {
+				var lar = Number(document.getElementById('lid').value)/30;
+				var alt = Number(document.getElementById('aid').value)/40;
+				var calcular = lar * alt
+
+			document.getElementById("btn-exibir").addEventListener("click", myFunction);
+
+				function myFunction() {
+ 				 Azul.innerHTML = 'vai precisar de : ' + calcular.toFixed(2) +' Azulejos' ;
+				}
+			}
+			function aj3 () {
+				var lar = Number(document.getElementById('lid').value)/40;
+				var alt = Number(document.getElementById('aid').value)/40;
+				var calcular = lar * alt
+
+			document.getElementById("btn-exibir").addEventListener("click", myFunction);
+
+				function myFunction() {
+ 				 Azul.innerHTML = 'vai precisar de : ' + calcular.toFixed(2) +' Azulejos' ;
+				}
+			}
+			</script>
+	</body>
+</html>
